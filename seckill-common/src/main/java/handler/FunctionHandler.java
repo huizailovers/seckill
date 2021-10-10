@@ -13,7 +13,6 @@ import java.util.function.Supplier;
  */
 public class FunctionHandler {
 
-
     public static <T> ResultData<T> handle(Supplier<T> tSupplier){
 
         try {
