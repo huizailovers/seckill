@@ -6,6 +6,7 @@
 	<modules>
 		<module>seckill-operation</module>
 		<module>seckill-inventory</module>
+		<module>seckill-common</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -15,7 +16,7 @@
 	</parent>
 	<groupId>com.zch.seckill</groupId>
 	<artifactId>seckill-parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>seckill</name>
 	<description>秒杀系统</description>
 	<properties>
