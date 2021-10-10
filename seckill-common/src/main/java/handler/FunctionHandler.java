@@ -13,6 +13,7 @@ import java.util.function.Supplier;
  */
 public class FunctionHandler {
 
+
     public static <T> ResultData<T> handle(Supplier<T> tSupplier){
 
         try {
@@ -23,9 +24,14 @@ public class FunctionHandler {
             return ResultData.fail(businessException.getError(),businessException.getMessage());
         } catch (Exception exception){
             // 运行异常
+            // todo 记录日志
             return ResultData.systemFail();
         }
     }
+
+
+
+
 
 
 
