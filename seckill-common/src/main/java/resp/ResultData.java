@@ -1,16 +1,15 @@
 package resp;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 /**
  * @author zhangchunhui
  * @date 2021/10/10
  */
 
-@Data
-@Builder
+@Setter
+@Getter
+@ToString
 @NoArgsConstructor
 public class ResultData<T> {
     /**
@@ -52,8 +51,6 @@ public class ResultData<T> {
         resultData.setMessage(ReturnCode.RC999.getMessage());
         return resultData;
     }
-
-
 
 
 }
