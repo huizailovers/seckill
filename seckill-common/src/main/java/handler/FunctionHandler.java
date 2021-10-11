@@ -1,6 +1,7 @@
 package handler;
 
 import exception.BusinessException;
+import lombok.extern.slf4j.Slf4j;
 import resp.ResultData;
 
 import java.util.function.Supplier;
@@ -11,6 +12,7 @@ import java.util.function.Supplier;
  * @author zhangchunhui
  * @date 2021/10/10
  */
+@Slf4j
 public class FunctionHandler {
 
 
@@ -24,7 +26,7 @@ public class FunctionHandler {
             return ResultData.fail(businessException.getError(),businessException.getMessage());
         } catch (Exception exception){
             // 运行异常
-            // todo 记录日志
+            log.error("exception occurred while processing ,message:{},exception:{}", exception.getMessage(), exception);
             return ResultData.systemFail();
         }
     }

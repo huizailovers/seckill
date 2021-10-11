@@ -21,7 +21,7 @@ public class ServiceExceptionAdvice {
 
     @ExceptionHandler(Exception.class)
     public ResultData handleException(HttpServletRequest request, Exception exception) {
-        logger.error("exception occurred while processing request, {}", exception.getMessage(), exception);
+        logger.error("exception occurred while processing request, {}", request, exception.getMessage(), exception);
         return ResultData.fail(ReturnCode.RC999.getCode(), exception.getMessage());
     }
 }
